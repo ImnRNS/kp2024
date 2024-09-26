@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Wisata</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+       <!-- Navbar Section -->
+       <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="https://via.placeholder.com/112x28" alt="Logo">
+            </a>
+    
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="{{ url_for('home') }}">
+                    Home
+                </a>
+    
+                <a class="navbar-item" href="{{ url_for('gallery') }}">
+                    Gallery
+                </a>
+    
+                <a class="navbar-item" href="{{ url_for('order') }}">
+                    Order Now
+                </a>
+            </div>
+    
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                        <a class="button is-info">
+                            Sign up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Cari wisata...">
+                </div>
+                <div class="control">
+                    <button class="button is-info">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                <!-- Card 1 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/300x200" alt="Wisata Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Pantai Indah</p>
+                                    <p class="subtitle is-6">Rp 500,000</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Nikmati keindahan pantai dengan paket wisata yang menarik.
+                            </div>
+                            <!-- Paket Pilihan -->
+                            <div class="field">
+                                <label class="label">Pilih Paket</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Reguler</option>
+                                            <option>VIP</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/300x200" alt="Wisata Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Gunung Sejuk</p>
+                                    <p class="subtitle is-6">Rp 750,000</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Trekking dan menikmati udara pegunungan dengan berbagai fasilitas.
+                            </div>
+                            <!-- Paket Pilihan -->
+                            <div class="field">
+                                <label class="label">Pilih Paket</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Reguler</option>
+                                            <option>VIP</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/300x200" alt="Wisata Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Desa Wisata</p>
+                                    <p class="subtitle is-6">Rp 600,000</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Jelajahi kehidupan pedesaan tradisional dengan berbagai atraksi budaya.
+                            </div>
+                            <!-- Paket Pilihan -->
+                            <div class="field">
+                                <label class="label">Pilih Paket</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Reguler</option>
+                                            <option>VIP</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Card 1 -->
+                                <div class="column is-one-third">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://via.placeholder.com/300x200" alt="Wisata Image">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="media">
+                                                <div class="media-content">
+                                                    <p class="title is-4">Pantai Indah</p>
+                                                    <p class="subtitle is-6">Rp 500,000</p>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                Nikmati keindahan pantai dengan paket wisata yang menarik.
+                                            </div>
+                                            <!-- Paket Pilihan -->
+                                            <div class="field">
+                                                <label class="label">Pilih Paket</label>
+                                                <div class="control">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option>Reguler</option>
+                                                            <option>VIP</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Card 2 -->
+                                <div class="column is-one-third">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://via.placeholder.com/300x200" alt="Wisata Image">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="media">
+                                                <div class="media-content">
+                                                    <p class="title is-4">Gunung Sejuk</p>
+                                                    <p class="subtitle is-6">Rp 750,000</p>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                Trekking dan menikmati udara pegunungan dengan berbagai fasilitas.
+                                            </div>
+                                            <!-- Paket Pilihan -->
+                                            <div class="field">
+                                                <label class="label">Pilih Paket</label>
+                                                <div class="control">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option>Reguler</option>
+                                                            <option>VIP</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Card 3 -->
+                                <div class="column is-one-third">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://via.placeholder.com/300x200" alt="Wisata Image">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="media">
+                                                <div class="media-content">
+                                                    <p class="title is-4">Desa Wisata</p>
+                                                    <p class="subtitle is-6">Rp 600,000</p>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                Jelajahi kehidupan pedesaan tradisional dengan berbagai atraksi budaya.
+                                            </div>
+                                            <!-- Paket Pilihan -->
+                                            <div class="field">
+                                                <label class="label">Pilih Paket</label>
+                                                <div class="control">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option>Reguler</option>
+                                                            <option>VIP</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer has-background-dark">
+    <div class="content has-text-centered">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <h4 class="title is-4">Kontak Kami</h4>
+                    <p>Email: <a href="mailto:info@tourguidehotel.com">info@tourguidehotel.com</a></p>
+                    <p>Telepon: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p>Alamat: Jalan Contoh No. 123, Kota, Negara</p>
+                </div>
+                <div class="column is-one-third">
+                    <h4 class="title is-4">Layanan Kami</h4>
+                    <ul>
+                        <li><a href="#tours">Tour Wisata</a></li>
+                        <li><a href="#hotels">Akomodasi Hotel</a></li>
+                        <li><a href="#packages">Paket Tour</a></li>
+                        <li><a href="#contact">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="column is-one-third">
+                    <h4 class="title is-4">Ikuti Kami</h4>
+                    <a href="https://www.facebook.com" class="icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" class="icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <p>&copy; 2024 Tour Guide & Hotel. Hak Cipta Dilindungi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

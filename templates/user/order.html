@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tour & Hotel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+  <!-- Navbar Section -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <img src="https://via.placeholder.com/112x28" alt="Logo">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a class="navbar-item" href="{{ url_for('gallery') }}">
+                Gallery
+            </a>
+
+            <a class="navbar-item" href="{{ url_for('order') }}">
+                Order Now
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light">
+                        Log in
+                    </a>
+                    <a class="button is-info">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Order Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title">Order Form</h2>
+
+            <form action="/order" method="post">
+                <!-- Tour Guide Section -->
+                <div class="box">
+                    <h3 class="title is-4">Paket Tour Guide</h3>
+
+                    <div class="field">
+                        <label class="label">Pilih Tour Guide</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="tour_guide">
+                                    <option value="guide1">Guide A (Rp 1,000,000)</option>
+                                    <option value="guide2">Guide B (Rp 800,000)</option>
+                                    <option value="guide3">Guide C (Rp 1,200,000)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Tanggal Tour</label>
+                        <div class="control">
+                            <input class="input" type="date" name="tour_date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Booking Section -->
+                <div class="box">
+                    <h3 class="title is-4">Paket Hotel</h3>
+
+                    <div class="field">
+                        <label class="label">Pilih Hotel</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="hotel">
+                                    <option value="hotel1">Hotel A (Rp 1,500,000/malam)</option>
+                                    <option value="hotel2">Hotel B (Rp 1,000,000/malam)</option>
+                                    <option value="hotel3">Hotel C (Rp 2,000,000/malam)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Tanggal Check-in</label>
+                        <div class="control">
+                            <input class="input" type="date" name="checkin_date" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Tanggal Check-out</label>
+                        <div class="control">
+                            <input class="input" type="date" name="checkout_date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="box">
+                    <h3 class="title is-4">Informasi Pemesan</h3>
+
+                    <div class="field">
+                        <label class="label">Nama Lengkap</label>
+                        <div class="control">
+                            <input class="input" type="text" name="name" placeholder="Nama Lengkap" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Nomor Telepon</label>
+                        <div class="control">
+                            <input class="input" type="tel" name="phone" placeholder="Nomor Telepon" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Pesan Sekarang</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-light" type="reset">Batal</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
